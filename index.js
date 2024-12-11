@@ -6,7 +6,7 @@ function cut() {
     const taskText = taskInput.value.trim();
   if (taskText === "") return;
 
-  // Create new task item
+ 
   const taskItem = document.createElement("li");
   taskItem.classList.add("flex", "justify-between", "items-center", "m-1");
 
@@ -25,20 +25,19 @@ function cut() {
 
   taskList.appendChild(taskItem);
 
-  // Clear the input field after adding the task
+ 
   taskInput.value = "";
 }
 
 addTaskButton.addEventListener("click", () => {
  
-  cut(); // Pass taskText as argument
+  cut();
 });
 
-// Fix the typo here to refer to 'taskInput'
 taskInput.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
+  
   if (event.key === "Enter") {
     const taskText = taskInput.value.trim();
-    cut(); // Pass taskText as argument
+    cut();
   }
 });
